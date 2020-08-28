@@ -7,6 +7,6 @@ const {
 const router = express.Router();
 
 router.get("/recent", getRecentImages);
-router.get("/search/:tag", searchImagesByTags);
+router.get("/search/:tags", searchImagesByTags);
 
 module.exports = router;

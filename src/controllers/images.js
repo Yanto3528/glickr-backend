@@ -1,5 +1,8 @@
 const getImages = require("../utils/getImages");
 
+// @description       Get recent images from flickr
+// @Routes            /api/images/recent
+// @method            GET
 exports.getRecentImages = async (req, res) => {
   const { page } = req.query;
   getImages(
@@ -8,6 +11,9 @@ exports.getRecentImages = async (req, res) => {
   );
 };
 
+// @description       Search images by tags
+// @Routes            /api/images/search/:tags
+// @method            GET
 exports.searchImagesByTags = async (req, res) => {
   const { tags } = req.params;
   const { page } = req.query;
